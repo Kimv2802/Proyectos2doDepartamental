@@ -1,3 +1,4 @@
+#include <iostream>
 #ifndef COLA_H
 #define COLA_H
 
@@ -12,9 +13,16 @@ class Cola
 		Nodo *frente=NULL;
 		Nodo *fin=NULL;
 
+
 	public:
 		void pedirDatos(int &);	
 		void agregarCola(int &);
+		void quitarCola();
+		void mostrarCola();
+		void vaciarCola();
+		bool colaVacia();
+		void mostrarTam();
 };
 
 #endif
+

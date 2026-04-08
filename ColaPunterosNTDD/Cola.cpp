@@ -21,3 +21,74 @@ void Cola::agregarCola(int &n){
 	
 	cout<<"\tEl numero: "<<n<<" ha sido guardado exitosamente";
 }
+
+void Cola::quitarCola(){
+	Nodo *aux = frente;
+	
+	if(frente!=NULL){
+		cout<<"Elemento "<<frente->dato<<" elimnado de la cola"<<endl;
+		frente=frente->siguiente;
+		delete aux;
+	}else{
+		cout<<"----No hay elementos para eliminar en la cola----"<<endl;
+	}
+}
+
+void Cola::mostrarCola(){
+	if(frente==NULL){
+		cout<<"----La cola esta vacia----"<<endl;
+	}else{
+		Nodo *aux = frente;
+		cout<<"\tfrente-> ";
+		while(aux!=NULL){
+			if(aux->siguiente!=NULL){
+				cout<<aux->dato<<" -> ";
+			}else{
+				cout<<aux->dato<<" <- fin"<<endl;
+			}
+			aux=aux->siguiente;
+		}
+	}
+	
+}
+
+void Cola::vaciarCola(){
+	
+	if(frente==NULL){
+		cout<<"----La cola esta vacia----"<<endl;
+	}else{
+	
+		while(frente!=NULL){
+			Nodo *aux = new Nodo();
+			aux = frente;
+			frente = frente->siguiente;
+			delete aux;
+		}
+	
+		if(frente==NULL){
+			frente = NULL;
+			fin = NULL;
+		}
+	
+		cout<<"Cola vaciada con exito"<<endl;
+		
+	}
+}
+
+bool Cola::colaVacia(){
+	return (frente==NULL)? true:false;
+}
+
+void Cola::mostrarTam(){
+	if(frente==NULL){
+		cout<<"----La cola esta vacia----"<<endl;
+	}else{
+		int contarNodos = 0;
+		Nodo *aux = frente;
+		while(aux!=NULL){
+			contarNodos++;
+			aux=aux->siguiente;
+		}
+		cout<<"El tamaño de la cola es de: "<<contarNodos<<" elemenos"<<endl;
+	}
+}
