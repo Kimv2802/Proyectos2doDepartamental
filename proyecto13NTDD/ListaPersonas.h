@@ -4,7 +4,7 @@
 using namespace std;
 
 struct Persona{
-	string Nombre;
+	string nombre;
 	string ap;
 	string am;
 	string genero;
@@ -15,9 +15,12 @@ class ListaPersonas
 {
 	public:
 		void crearLista();
+		void llenarLista();
+		void mostrarLista();
+		void eliminarLista();
 	protected:
 		int cantPersonas = 0;
-		Persona *ptrLista;
+		Persona *ptrLista = NULL;
 		
 };
 
