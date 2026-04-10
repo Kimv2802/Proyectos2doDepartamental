@@ -19,7 +19,7 @@ void Cola::agregarCola(int &n){
 	
 	fin = nuevo_nodo;
 	
-	cout<<"\tEl numero: "<<n<<" ha sido guardado exitosamente";
+	cout<<"\tEl numero: "<<n<<" ha sido guardado exitosamente"<<endl;
 }
 
 void Cola::quitarCola(){
