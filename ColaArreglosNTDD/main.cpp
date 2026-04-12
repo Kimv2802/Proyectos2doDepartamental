@@ -60,8 +60,9 @@ int main(int argc, char** argv) {
 				}else{
 					nuevaCola.eliminarElemento();
 				}
-				break;
 				system("pause");
+				break;
+				
 			}
 			
 			case 4:{
