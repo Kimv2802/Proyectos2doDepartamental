@@ -8,10 +8,10 @@ class Cola
 {
 	private:
 		struct Numeros{
-			int *arreglo = NULL;
-			int frente = 0;
-			int fin = -1;
-			int capacidad = 0;
+			int *arreglo;
+			int frente;
+			int fin;
+			int capacidad;
 		};
 		
 		
@@ -19,10 +19,10 @@ class Cola
 		
 		
 		Numeros arr;
-		int i=0;
+		int i;
 		
 	public:	
-		bool creada = false;
+		bool creada;
 		
 		void crearArreglo();
 		void redimensionarArreglo();
@@ -34,6 +34,8 @@ class Cola
 		bool isEmpty();
 		void mostrarTamano();
 		void vaciarCola();
+		Cola();
+		~Cola();
 };
 
 #endif

@@ -3,6 +3,25 @@
 #include <stdlib.h>
 using namespace std;
 
+Cola::Cola(){
+			
+	arr.arreglo=NULL;
+	arr.frente = 0;
+	arr.fin = -1;
+	arr.capacidad = 0;	
+	
+	i=0;	
+	
+	creada = false;
+}
+
+Cola::~Cola(){
+	if(arr.arreglo != NULL){
+        delete[] arr.arreglo;
+        arr.arreglo = NULL;
+    }
+}
+
 void Cola::crearArreglo(){
 	cout<<"Digite la cantidad de elementos desea agregar a la cola: ";
 	cin>>arr.capacidad;
@@ -43,6 +62,7 @@ void Cola::redimensionarArreglo(){
 		*(arr.arreglo + j) = *(aux.arreglo + j);
 	}
 	
+	delete[] aux.arreglo;
 	
 	cout<<"EL ARREGLO PARA LA COLA SE HA REDIMENCIONADO CON EXITO"<<endl;
 	

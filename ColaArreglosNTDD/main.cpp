@@ -127,6 +127,12 @@ int main(int argc, char** argv) {
 				break;
 			}
 			
+			case 9:{
+				cout<<"Saliendo del programa..."<<endl;
+				system("pause");
+				break;
+			}
+			
 			default:{
 				cout<<"Opcion no valida,ingrese una opcion del menu"<<endl;
 				system("pause");
