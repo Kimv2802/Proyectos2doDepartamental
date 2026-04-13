@@ -4,6 +4,45 @@
 #include <string.h>;
 using namespace std;
 
+ListaPersonas::ListaPersonas(){
+	cantPersonas = 0;
+		
+	nombre = NULL;
+	ap = NULL;
+	am = NULL;
+	genero = NULL;
+	edad = NULL;
+}
+
+ListaPersonas::~ListaPersonas(){
+	
+	if(nombre!=NULL){
+		delete[] nombre;
+		nombre = NULL;	
+	}
+	
+	if(ap!=NULL){
+		delete[] ap;
+		ap = NULL;	
+	}
+	
+	if(am!=NULL){
+		delete[] am;
+		am = NULL;	
+	}
+	
+	if(genero!=NULL){
+		delete[] genero;
+		genero = NULL;	
+	}
+	
+	if(edad!=NULL){
+		delete[] edad;
+		edad = NULL;	
+	}
+	
+}
+
 void ListaPersonas::pedirDatos(){
 	cout<<"Digite la cantidad de personas que desee agregar a la lista: ";
 	cin>>cantPersonas;
@@ -54,17 +93,4 @@ void ListaPersonas::imprimirLista(){
 	
 }
 
-void ListaPersonas::deshacerLista(){
-	
-	delete[] nombre;
-	delete[] ap;
-	delete[] am;
-	delete[] genero;
-	delete[] edad;
-	
-	cantPersonas = 0;
-	
-	cout<<"\tLA LISTA SE HA ELIMINADO CON EXITO"<<endl;
-	
-}
 

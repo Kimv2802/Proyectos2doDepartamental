@@ -4,6 +4,18 @@
 #include <string>
 using namespace std;
 
+ListaPersonas::ListaPersonas(){
+	cantPersonas = 0;
+	ptrLista = NULL;
+}
+
+ListaPersonas::~ListaPersonas(){
+	if(ptrLista!= NULL){
+		delete[] ptrLista;
+		ptrLista = NULL;
+	}
+}
+
 void ListaPersonas::crearLista(){
 	
 	cout<<"Digite la cantidad de personas que desea agregar a la lista: ";

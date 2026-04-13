@@ -13,9 +13,6 @@ int main(int argc, char** argv) {
 	listaNueva.crearLista();
 	listaNueva.llenarLista();
 	listaNueva.imprimirLista();
-	listaNueva.deshacerLista();
-	
-	
 	
 	system("pause");
 	return 0;

@@ -18,9 +18,11 @@ class ListaPersonas
 		void llenarLista();
 		void mostrarLista();
 		void eliminarLista();
+		ListaPersonas();
+		~ListaPersonas();
 	protected:
-		int cantPersonas = 0;
-		Persona *ptrLista = NULL;
+		int cantPersonas;
+		Persona *ptrLista;
 		
 };
 

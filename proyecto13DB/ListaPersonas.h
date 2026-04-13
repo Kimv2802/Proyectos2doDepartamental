@@ -12,14 +12,17 @@ class ListaPersonas
 		void imprimirLista();
 		void deshacerLista();
 		
+		ListaPersonas();
+		~ListaPersonas();
+		
 	protected:
 		int cantPersonas = 0;
 		
-		string *nombre = NULL;
-		string *ap = NULL;
-		string *am = NULL;
-		string *genero = NULL;
-		int *edad = NULL;
+		string *nombre;
+		string *ap;
+		string *am;
+		string *genero;
+		int *edad;
 		
 };
 

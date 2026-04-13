@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
 	nuevaLista.crearLista();
 	nuevaLista.llenarLista();
 	nuevaLista.mostrarLista();
-	nuevaLista.eliminarLista(); //liberar memoria
+
 	
 	
 	system("pause");
