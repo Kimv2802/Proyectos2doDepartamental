@@ -27,19 +27,23 @@ int main(int argc, char** argv) {
 			case 1:{
 				nuevaCola.pedirDatos(n);
 				nuevaCola.agregarCola(n);
+				system("pause");
 				break;
 			}
 			
 			case 2:{
 				nuevaCola.quitarCola();
+				system("pause");
 				break;
 			}
 			case 3:{
 				nuevaCola.mostrarCola();
+				system("pause");
 				break;
 			}
 			case 4:{
 				nuevaCola.vaciarCola();
+				system("pause");
 				break;
 			}
 			case 5:{
@@ -48,10 +52,12 @@ int main(int argc, char** argv) {
 				}else{
 					cout<<"Existen elementos en la cola"<<endl;
 				}
+				system("pause");
 				break;
 			}
 			case 6:{
 				nuevaCola.mostrarTam();
+				system("pause");
 				break;
 			}
 			case 7:{
@@ -60,10 +66,14 @@ int main(int argc, char** argv) {
 			}
 			default:{
 				cout<<"Opcion no valida, seleccione una del menu"<<endl;
+				system("pause");
 				break;
 			}
 			
 		}
+		
+		system("cls");
+		
 	}while(opcion!=7);
 	
 	

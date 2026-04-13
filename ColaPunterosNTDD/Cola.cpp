@@ -39,7 +39,7 @@ void Cola::mostrarCola(){
 		cout<<"----La cola esta vacia----"<<endl;
 	}else{
 		Nodo *aux = frente;
-		cout<<"\tfrente-> ";
+		cout<<"frente-> ";
 		while(aux!=NULL){
 			if(aux->siguiente!=NULL){
 				cout<<aux->dato<<" -> ";
@@ -89,6 +89,6 @@ void Cola::mostrarTam(){
 			contarNodos++;
 			aux=aux->siguiente;
 		}
-		cout<<"El tamaño de la cola es de: "<<contarNodos<<" elemenos"<<endl;
+		cout<<"El tamaño de la cola es de: "<<contarNodos<<" elementos"<<endl;
 	}
 }
