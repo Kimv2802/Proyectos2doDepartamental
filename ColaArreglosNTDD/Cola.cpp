@@ -28,7 +28,7 @@ void Cola::redimensionarArreglo(){
 	int nuevaCapacidad;
 	
 	cout<<"Actualmente su capacidad es: "<<arr.capacidad<<endl;
-	cout<<"Digite cuantos elemento mas desea agregar: ";
+	cout<<"Digite cuantos elementos mas desea agregar: ";
 	cin>>nuevaCapacidad;
 	
 	aux.capacidad += nuevaCapacidad; 
@@ -42,7 +42,9 @@ void Cola::redimensionarArreglo(){
 	for(int j=0;j<aux.fin+1;j++){
 		*(arr.arreglo + j) = *(aux.arreglo + j);
 	}
-
+	
+	
+	cout<<"EL ARREGLO PARA LA COLA SE HA REDIMENCIONADO CON EXITO"<<endl;
 	
 }
 
@@ -76,6 +78,7 @@ void Cola::eliminarElemento(){
 	}
 	cout<<"Elemento del frente eliminado"<<endl;
 	arr.fin--;
+	i--;
 }
 
 void Cola::vaciarCola(){

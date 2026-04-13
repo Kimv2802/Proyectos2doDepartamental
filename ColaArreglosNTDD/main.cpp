@@ -44,7 +44,7 @@ int main(int argc, char** argv) {
 					cout<<"Primero debe crear una cola"<<endl;
 					system("pause");
 				}else if(nuevaCola.isFull()){
-					cout<<"La cola está llena, puedes redimecionarla con la opcion 1"<<endl;
+					cout<<"La cola esta llena, puedes redimecionarla con la opcion 1"<<endl;
 					system("pause");
 				}else{
 					nuevaCola.agregarElemento();
@@ -56,7 +56,7 @@ int main(int argc, char** argv) {
 				if(!nuevaCola.creada){
 					cout<<"Primero debe crear una cola"<<endl;
 				}else if(nuevaCola.isEmpty()){
-					cout<<"La cola esta vacia, no hay nada que eliminar";
+					cout<<"La cola esta vacia, no hay nada que eliminar"<<endl;
 				}else{
 					nuevaCola.eliminarElemento();
 				}
@@ -69,7 +69,7 @@ int main(int argc, char** argv) {
 				if(!nuevaCola.creada){
 					cout<<"Primero debes crear una cola"<<endl;
 				}else if(nuevaCola.isEmpty()){
-					cout<<"La cola esta vacia, no hay nada que mostrar";
+					cout<<"La cola esta vacia, no hay nada que mostrar"<<endl;
 				}else{
 					nuevaCola.mostrarCola();
 				}
@@ -123,6 +123,12 @@ int main(int argc, char** argv) {
 				}else{
 					nuevaCola.mostrarCapacidad();
 				}
+				system("pause");
+				break;
+			}
+			
+			default:{
+				cout<<"Opcion no valida,ingrese una opcion del menu"<<endl;
 				system("pause");
 				break;
 			}
