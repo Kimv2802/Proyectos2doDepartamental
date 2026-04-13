@@ -62,6 +62,7 @@ int main(int argc, char** argv) {
 			}
 			case 7:{
 				cout<<"......Saliendo del programa......"<<endl;
+				system("pause");
 				break;
 			}
 			default:{

@@ -2,16 +2,16 @@
 #ifndef COLA_H
 #define COLA_H
 
-struct Nodo{
-	int dato;
-	Nodo *siguiente;
-};
-
 class Cola
 {
 	private:
-		Nodo *frente=NULL;
-		Nodo *fin=NULL;
+		struct Nodo{
+			int dato;
+			Nodo *siguiente;
+		};
+		
+		Nodo *frente;
+		Nodo *fin;
 
 
 	public:
@@ -22,6 +22,10 @@ class Cola
 		void vaciarCola();
 		bool colaVacia();
 		void mostrarTam();
+		
+		Cola();
+		~Cola();
+		
 };
 
 #endif

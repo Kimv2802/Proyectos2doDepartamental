@@ -2,6 +2,24 @@
 #include<iostream>
 using namespace std;
 
+Cola::Cola(){
+	frente = NULL;
+	fin = NULL;
+}
+
+Cola::~Cola(){
+	
+	while(frente!=NULL){
+		Nodo *aux = frente;
+		frente = frente->siguiente;
+		delete aux;
+	}
+	
+	fin = NULL;
+	
+}
+
+
 void Cola::pedirDatos(int &n){
 	cout<<"Digite un numero para guardarlo en la cola: ";
 	cin>>n;
@@ -59,8 +77,7 @@ void Cola::vaciarCola(){
 	}else{
 	
 		while(frente!=NULL){
-			Nodo *aux = new Nodo();
-			aux = frente;
+			Nodo *aux = frente;
 			frente = frente->siguiente;
 			delete aux;
 		}
