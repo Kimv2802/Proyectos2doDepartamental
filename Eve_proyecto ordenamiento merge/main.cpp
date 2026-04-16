@@ -1,5 +1,6 @@
 #include "MERGE.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 void mostrar(struct Dato arr[], int n) {
     for (int i = 0; i < n; i++) {
@@ -24,6 +25,8 @@ int main() {
 
     printf("Ordenado: ");
     mostrar(arr, n);
-
+    
+    
+    system("pause");
     return 0;
 }

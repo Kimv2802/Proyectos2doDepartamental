@@ -1,4 +1,5 @@
 #include "PROMEDIO.h"
+#include<stdlib.h>
 
 int main(){
 
@@ -7,6 +8,7 @@ int main(){
     p.leer();
     p.calcular();
     p.mostrar();
-
+    
+    system("pause");
     return 0;
 }

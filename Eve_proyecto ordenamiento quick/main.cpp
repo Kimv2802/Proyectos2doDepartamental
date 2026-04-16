@@ -1,5 +1,6 @@
 #include "QUICK.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include "quick.h"
 
 void mostrar(struct Dato arr[], int n) {
@@ -25,6 +26,7 @@ int main() {
 
     printf("Ordenado: ");
     mostrar(arr, n);
-
+    
+    system("pause");
     return 0;
 }

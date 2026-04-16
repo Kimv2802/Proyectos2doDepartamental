@@ -1,5 +1,6 @@
 #include "BURBUJA.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
     int n;
@@ -18,6 +19,7 @@ int main() {
 
     printf("Ordenado: \n");
     mostrar(arr, n);
-
+    
+    system("pause");
     return 0;
 }
