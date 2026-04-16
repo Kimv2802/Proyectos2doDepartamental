@@ -1,1 +1,0 @@
-En esta rama van los problemas de colas que trabajan con NTDD osea Nuevo Tipo de Dato

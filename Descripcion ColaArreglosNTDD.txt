@@ -1,1 +1,0 @@
-En este programa implemente el uso de system("cls") para limpiar la terminal cada que se ejecuta una opción, adicionalmente en cada una se usa system("pause") para leer los mensajes programados y que no se borren por system("cls"), sino que de tiempo de leerlos hasta que el usuario presione cualquier tecla para continuar con el programa
