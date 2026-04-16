@@ -1,1 +1,0 @@
-Este programa genera una lista de personas de forma dinamica con un NTDD y de forma indirecta (punteros)

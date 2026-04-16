@@ -1,3 +1,0 @@
-En esta version del proyecto13 en la que trabajamos con datos base, la lista
-de personas fue creada de forma dinamica con un arreglo para cada tipo de dato
-con ayuda de distintos punteros como lo especifica el programa
