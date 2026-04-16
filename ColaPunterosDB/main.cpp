@@ -25,8 +25,13 @@ int main(int argc, char** argv) {
 		
 		switch(opcion){
 			case 1:{
+<<<<<<< HEAD:ColaPunterosDB/main.cpp
 				nuevaCola.pedirDatos(valor);
 				nuevaCola.agregarCola(valor);
+=======
+				nuevaCola.pedirDatos(n);
+				nuevaCola.agregarCola(n);
+>>>>>>> proyectosColasNTDD:ColaPunterosNTDD/main.cpp
 				system("pause");
 				break;
 			}

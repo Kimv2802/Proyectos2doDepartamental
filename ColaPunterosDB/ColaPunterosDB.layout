@@ -1,7 +1,16 @@
+<<<<<<< HEAD:ColaPunterosDB/ColaPunterosDB.layout
+=======
+[Editor_1]
+CursorCol=1
+CursorRow=1
+TopLine=1
+LeftChar=1
+>>>>>>> proyectosColasNTDD:ColaPunterosNTDD/ColaPunterosNTDD.layout
 [Editors]
 Order=0,1,2
 Focused=2
 [Editor_0]
+<<<<<<< HEAD:ColaPunterosDB/ColaPunterosDB.layout
 CursorCol=15
 CursorRow=24
 TopLine=40
@@ -14,5 +23,14 @@ LeftChar=1
 [Editor_2]
 CursorCol=48
 CursorRow=97
+=======
+CursorCol=5
+CursorRow=72
+TopLine=47
+LeftChar=1
+[Editor_2]
+CursorCol=13
+CursorRow=18
+>>>>>>> proyectosColasNTDD:ColaPunterosNTDD/ColaPunterosNTDD.layout
 TopLine=1
 LeftChar=1
