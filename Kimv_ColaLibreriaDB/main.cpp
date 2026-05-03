@@ -1,12 +1,12 @@
 #include <iostream>
 #include <stdlib.h>
-#include "Cola.h" // Tu nueva clase
+#include "Cola.h" 
 
 using namespace std;
 
 int main() {
     int valor, opcion;
-    Cola nuevaCola; // Instancia de tu clase
+    Cola nuevaCola; 
     
     do {
         cout << "\n.:Menu de Cola de Dato base por libreria:." << endl;

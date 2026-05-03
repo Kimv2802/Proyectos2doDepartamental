@@ -1,8 +1,9 @@
 #ifndef LISTAPERSONAS_H
 #define LISTAPERSONAS_H
 #include <iostream>
-#include <string.h>
+#include <string>
 using namespace std;
+
 class ListaPersonas
 {
 	public:
@@ -16,14 +17,13 @@ class ListaPersonas
 		~ListaPersonas();
 		
 	protected:
-		int cantPersonas = 0;
+		int cantPersonas;
 		
 		string *nombre;
 		string *ap;
 		string *am;
 		string *genero;
 		int *edad;
-		
 };
 
 #endif

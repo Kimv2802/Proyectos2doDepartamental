@@ -17,55 +17,96 @@ ListaPersonas::~ListaPersonas(){
 }
 
 void ListaPersonas::crearLista(){
-	
+	if(ptrLista != NULL){
+		cout << "\nYa existe una lista. Eliminela antes de crear una nueva.\n";
+		return;
+	}
+
 	cout<<"Digite la cantidad de personas que desea agregar a la lista: ";
 	cin>>cantPersonas;
+
+	if(cin.fail() || cantPersonas <= 0){
+		cin.clear();
+		cin.ignore(1000, '\n');
+		cout << "Cantidad invalida.\n";
+		cantPersonas = 0;
+		return;
+	}
 	
 	ptrLista = new Persona[cantPersonas];
-	cout<<"\t Lista de personas creada con exito";
+	cout<<"\tLista de personas creada con exito\n";
 }
 
 void ListaPersonas::llenarLista(){
+	if(ptrLista == NULL){
+		cout << "\nPrimero debe crear la lista.\n";
+		return;
+	}
+
 	cin.ignore();
+
 	for(int i=0;i<cantPersonas;i++){
 		cout<<"\nLLENANDO DATOS DE LA PERSONA "<<i+1<<endl;
+
 		cout<<"Nombre: ";
-		getline(cin, (*(ptrLista + i)).nombre);
+		getline(cin, (ptrLista + i)->nombre);
+
 		cout<<"Apellido Paterno: ";
-		getline(cin, (*(ptrLista + i)).ap);
+		getline(cin, (ptrLista + i)->ap);
+
 		cout<<"Apellido Materno: ";
-		getline(cin, (*(ptrLista + i)).am);
+		getline(cin, (ptrLista + i)->am);
+
 		cout<<"Genero: ";
-		getline(cin, (*(ptrLista + i)).genero);
+		getline(cin, (ptrLista + i)->genero);
+
 		cout<<"Edad: ";
 		cin>>(ptrLista + i)->edad;
+
+		while(cin.fail() || (ptrLista + i)->edad <= 0){
+			cin.clear();
+			cin.ignore(1000, '\n');
+			cout << "Edad invalida. Intente de nuevo: ";
+			cin >> (ptrLista + i)->edad;
+		}
+
+		cin.ignore();
 	}
-	
 }
 
 void ListaPersonas::mostrarLista(){
+	if(ptrLista == NULL){
+		cout << "\nNo hay lista creada.\n";
+		return;
+	}
+
+	if(cantPersonas == 0){
+		cout << "\nLa lista esta vacia.\n";
+		return;
+	}
+
 	for(int i=0;i<cantPersonas;i++){
 		cout<<"\nMOSTRANDO DATOS DE LA PERSONA "<<i+1<<endl;
+
 		cout<<"Nombre Completo: ";
-		cout<<(ptrLista + i)->nombre;
-		cout<<" "<<(ptrLista + i)->ap;
-		cout<<" "<<(ptrLista + i)->am<<endl;
-		cout<<"Genero: ";
-		cout<<(ptrLista + i)->genero<<endl;
-		cout<<"Edad: ";
-		cout<<(ptrLista + i)->edad<<endl;
-	}	
-	
-	
+		cout<<(ptrLista + i)->nombre<<" "
+			<<(ptrLista + i)->ap<<" "
+			<<(ptrLista + i)->am<<endl;
+
+		cout<<"Genero: "<<(ptrLista + i)->genero<<endl;
+		cout<<"Edad: "<<(ptrLista + i)->edad<<endl;
+	}
 }
 
 void ListaPersonas::eliminarLista(){
-	
+	if(ptrLista == NULL){
+		cout << "\nNo hay lista para eliminar.\n";
+		return;
+	}
+
 	delete[] ptrLista;
-	
 	ptrLista = NULL;
 	cantPersonas = 0;
-	
-	cout<<"\nLA LISTA SE HA BORRADO CON EXITO"<<endl;
-	
+
+	cout<<"\nLa lista se ha borrado con exito\n";
 }
